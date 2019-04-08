@@ -1,0 +1,10 @@
+<div class="header">
+  <p><i class="fas fa-bolt"></i><%= link_to "My Lyrics", "/" %></p>
+  <div class="search-form">
+    <%= form_tag('/products', method: :get) do %>
+      <input class="search-form__type-space" name="artist" placeholder="search artist" type="text" value="">
+        <button type="submit"><i class="fab fa-searchengin"></i></button>
+      </input>
+    <% end %>
+  </div>
+</div>

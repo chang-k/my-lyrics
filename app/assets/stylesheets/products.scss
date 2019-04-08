@@ -1,0 +1,152 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,
+img {
+    border:0;
+}
+
+* {
+  border-box: box-sizing;
+  list-style: none;
+}
+
+.header {
+  height: 60px;
+  background-color: black;
+  display: flex;
+  border-style: none;
+  p {
+    color: green;
+    font-family: Impact;
+    font-size: 1.7rem;
+    margin-left: 18px;
+    margin: auto 0;
+    text-decoration: none;
+    a:link { color: green; }
+    a:visited { color: green; }
+    a:hover { color: green; }
+    a:active { color: green; }
+    i {
+      font-size: 2.0rem;
+    }
+  }
+  .search-form {
+    border-style: none;
+    margin: auto;
+    &__type-space {
+      width: 300px;
+      height: 37px;
+      background-color: #000066;
+      color: white;
+      border: 0;
+      padding-left: 10px;
+      &::placeholder {
+        color: white;
+      }
+    }
+    .fab {
+      font-size: 2.0rem;
+      padding-left: 10px;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  .seek-bar {
+  background-color: black;
+  width: 200px;
+  height: calc(100vh - 60px);
+  color: gray;
+    .login-user {
+      &__name {
+        margin: 10px 0 10px 20px;
+        font-size: 1.4rem;
+      }
+      &__favorite-space {
+        margin-left: 30px;
+      }
+    }
+  }
+  .main-menu {
+    background-color: gray;
+    color: white;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 60px);
+    overflow: scroll;
+    &__playlist {
+      padding: auto 0;
+      &__artist-space {
+        display: flex;
+        margin: 50px 0 30px 100px;
+        &__artist {
+          margin-left: 30px;
+          .artist {
+            border-bottom: solid 0.5px white;
+          }
+          .artist-name {
+            font-family: arial black;
+            font-size: 3.5rem;
+            margin: 30px 0;
+          }
+        }
+      }
+      &__albums {
+        margin-left: 100px;
+        .discography {
+          font-size: 1.5rem;
+        }
+        &__album-field {
+          margin-left: 20px;
+          &__album-name {
+            margin-top: 30px;
+            text-decoration: none;
+            a:link { color: white; }
+            a:visited { color: white; }
+            a:hover { color: white; }
+            a:active { color: white; }
+          }
+          .track-name {
+            padding-left: 10px;
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}
+

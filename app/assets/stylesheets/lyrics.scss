@@ -1,0 +1,46 @@
+// Place all the styles related to the lyrics controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-menu {
+  &__lyrics-and-player {
+    display: flex;
+    position: relative;
+    margin-left: 30px;
+    &__lyrics-space {
+      .lyric-artist-name {
+        font-family: arial black;
+        font-size: 3.5rem;
+        margin: 30px 0;
+      }
+      .lyric-album-name {
+        font-family: arial black;
+        font-size: 2.0rem;
+        margin-left: 20px;
+        padding-bottom: 20px;
+      }
+      .tracks-name {
+        margin-left: 20px;
+        margin-right: 80px;
+        .get-this-lyric {
+          min-width: 450px;
+          padding-left: 8px;
+          background-color: #ddd;
+          color: gray;
+          border-radius: 4px;
+        }
+      }
+    }
+    &__player {
+      position: absolute;
+      right: 30px;
+      top: 60px;
+      position: fixed;
+      p {
+        font-size: 2.0rem;
+        font-family: Impact;
+        margin-top: 20px;
+      }
+    }
+  }
+}

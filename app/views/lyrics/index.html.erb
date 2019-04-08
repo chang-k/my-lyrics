@@ -1,0 +1,22 @@
+<%= render partial: "products/artist" %>
+
+<div class= "wrapper">
+  <%= render partial: "products/bar" %>
+  <div class="main-menu">
+    <div class="main-menu__lyrics-and-player">
+      <div class="main-menu__lyrics-and-player__lyrics-space">
+        <p class="lyric-artist-name"><%= @artist_name %></p>
+        <P class="lyric-album-name"><i class="fas fa-compact-disc"></i> <%= @album_name %></P>
+        <div class="tracks-name">
+          <% @tracks.each_with_index do |track, i| %>
+            <li><i class="fas fa-play"></i>  <%= i+1 %>. <span><%= track.name %></span><p class="get-this-lyric"><span>[Get this lyric]</span><br></p></li>
+          <% end %>
+        </div>
+      </div>
+      <div class="main-menu__lyrics-and-player__player">
+        <p><i class="fas fa-headphones"></i> Player</p>
+        <iframe src="https://open.spotify.com/embed/album/<%= @album_id %>" width="400" frameborder="0" height="600" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+  </div>
+</div>

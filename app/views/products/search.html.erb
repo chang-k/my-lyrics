@@ -1,0 +1,33 @@
+<%= render partial: "artist" %>
+
+<div class= "wrapper">
+  <%= render partial: "bar" %>
+  <div class="main-menu">
+    <div class="main-menu__playlist">
+      <div class="main-menu__playlist__artist-space">
+        <span><img src="<%= asset_path @artist.images[0]["url"] %>" alt="" width="200" height="200"></span>
+        <div class="main-menu__playlist__artist-space__artist">
+          <span class="artist">Artist</span>
+          <p class="artist-name"><%= @artist.name %></p>
+        </div>
+      </div>
+      <ul class="main-menu__playlist__albums">
+        <p class="discography"><i class="fas fa-music"></i> Dicography</p>
+        <div class="main-menu__playlist__albums__album-field">
+          <% @albums.each do |album| %>
+            <li>
+              <p class="main-menu__playlist__albums__album-field__album-name">
+                <%= link_to album.name, controller: 'lyrics', action: 'index', album_id: album.id, album_name: album.name, artist_name: @artist.name %>
+              </p>
+              <% album.tracks.each do |track| %>
+                <li class="track-name">
+                  <%= track.name %>
+                </li>
+              <% end %>
+            </li>
+          <% end %>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
