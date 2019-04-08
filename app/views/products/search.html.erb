@@ -5,7 +5,9 @@
   <div class="main-menu">
     <div class="main-menu__playlist">
       <div class="main-menu__playlist__artist-space">
-        <span><img src="<%= asset_path @artist.images[0]["url"] %>" alt="" width="200" height="200"></span>
+        <% if @artist.images.present? %>
+          <span><img src="<%= asset_path @artist.images[0]["url"] %>" alt="" width="200" height="200"></span>
+        <% end %>
         <div class="main-menu__playlist__artist-space__artist">
           <span class="artist">Artist</span>
           <p class="artist-name"><%= @artist.name %></p>
